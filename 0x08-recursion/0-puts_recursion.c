@@ -2,24 +2,22 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
+
 
 /**
  *it prints the string line after 
  * */
 
-int main()
+int _puts_recursion(char *S)
 {
-	int ctr = 0;
-	int str[]= "just a line to test \n";
-	printf("\n print only this line \n");
-	printf("----------------------------------------------------\n");	
-	while (isprint(str[ctr]))
+
+	if(*s == "\0")
 	{
-		putchar (str[ctr]);
-		ctr++;
+		_putchar("\n");
+		return;
 	}
-	printf("\n\n");
-	return 0;
-		
+	_putchar(*s);
+	_puts_recursion(s + 1);
 }
 
